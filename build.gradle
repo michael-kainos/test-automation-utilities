@@ -1,0 +1,21 @@
+plugins {
+    id 'java'
+}
+
+sourceCompatibility = '12.0'
+targetCompatibility = '12.0'
+version = '1.0.0'
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+}
+
+task jarSources(type:Jar){
+    from sourceSets.main.allSource
+    archiveClassifier.set('source')
+}
+
