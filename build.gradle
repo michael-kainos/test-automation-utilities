@@ -10,7 +10,15 @@ repositories {
     mavenCentral()
 }
 
+SELENIUM_VERSION="3.141.59"
+
+
 dependencies {
-    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: '3.141.59'
+    compile group: 'org.seleniumhq.selenium', name: 'selenium-java', version: {SELENIUM_VERSION}
+    compile group: 'com.browserstack', name: 'browserstack-local-java', version: '1.0.3'
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.25'
+    testCompile group: 'org.slf4j', name: 'slf4j-log4j12', version: '1.7.25'
+
+
 }
 
