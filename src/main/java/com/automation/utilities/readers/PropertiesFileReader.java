@@ -26,7 +26,7 @@ public class PropertiesFileReader {
         FileInputStream propertiesFileInputStream = null;
         Properties properties = null;
         try {
-            propertiesFileInputStream = new FileInputStream(propertyFilePath);
+            propertiesFileInputStream = new FileInputStream(System.getProperty("user.dir") + propertyFilePath);
             properties = new Properties();
             properties.load(propertiesFileInputStream);
         } catch(IOException fileNotFoundException) {
